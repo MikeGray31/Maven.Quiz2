@@ -17,7 +17,7 @@ public class RotateTest {
     @Test
     public void testRotateLeft_forOne(){
         //Given
-        Integer[] array = {5, 1, 8, 4, 2};
+        Integer[] array =    {5, 1, 8, 4, 2};
         Integer[] expected = {1, 8, 4, 2, 5};
 
         //When
@@ -30,11 +30,24 @@ public class RotateTest {
     @Test
     public void testRotateLeft_forMoreThanOne(){
         //Given
-        Integer[] array = {5, 1, 8, 4, 2};
+        Integer[] array =    {5, 1, 8, 4, 2};
         Integer[] expected = {4, 2, 5, 1, 8,};
 
         //When
         Integer[] actual = utility.rotate(array, 3);
+
+        //Then
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testRotateLeft_forNegative(){
+        //Given
+        Integer[] array =    {5, 1, 8, 4, 2};
+        Integer[] expected = {2, 5, 1, 8, 4};
+
+        //When
+        Integer[] actual = utility.rotate(array, -1);
 
         //Then
         Assert.assertArrayEquals(expected, actual);

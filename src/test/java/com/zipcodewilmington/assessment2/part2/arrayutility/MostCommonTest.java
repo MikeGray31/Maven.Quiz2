@@ -15,7 +15,7 @@ public class MostCommonTest {
 
 
     @Test
-    public void testMostCommon_withOnlyOneElement(){
+    public void testMostCommon_withOnlyOneElement() {
         //Given
         Integer[] array = {5};
         Integer expected = 5;
