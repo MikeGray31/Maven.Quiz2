@@ -7,23 +7,17 @@ public class WuTangConcatenator {
     }
 
     public Boolean isWu() {
-        if(in % 3 == 0){
-            return true;
-        }
-        return false;
+        if(in % 3 == 0) return true;
+        else return false;
     }
 
     public Boolean isTang() {
-        if(in % 5 == 0){
-            return true;
-        }
-        return false;
+        if(in % 5 == 0) return true;
+        else return false;
     }
 
     public Boolean isWuTang() {
-        if(in % 3 == 0 && in % 5 == 0){
-            return true;
-        }
-        return false;
+        if(this.isWu() && this.isTang()) return true;
+        else return false;
     }
 }
