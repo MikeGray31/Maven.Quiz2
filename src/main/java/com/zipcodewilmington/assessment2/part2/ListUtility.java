@@ -9,9 +9,7 @@ public class ListUtility {
     List<Integer> list = new ArrayList<>();
 
     public Boolean add(int i) {
-
             return list.add(i);
-
     }
 
     public Integer size() {
@@ -32,19 +30,16 @@ public class ListUtility {
 
     public Integer mostCommon() {
         Integer current = list.get(0);
-        for(int i = 0; i < list.size(); i++){
-            if(countOccurrence(list, list.get(i)) > countOccurrence(list,current)){
-                current = list.get(i);
-            }
+        for(Integer i: list) {
+            if(countOccurrence(list, i)> countOccurrence(list,current)) current = i;
         }
         return current;
-
     }
 
     public Integer countOccurrence(List<Integer>list, Integer valueToEvaluate) {
         Integer counter = 0;
-        for(int i = 0; i < list.size(); i++){
-            if(list.get(i) == valueToEvaluate){
+        for(Integer i: list){
+            if(i == valueToEvaluate){
                 counter++;
             }
         }
